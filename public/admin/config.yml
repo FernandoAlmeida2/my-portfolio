@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: FernandoAlmeida2/my-portfolio
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição", name: "description", widget: "text" }
+      - { label: "Tecnologias", name: "techs", widget: "list" }
+      - { label: "Imagem Principal", name: "image", widget: "image" }
+      - { label: "Link do Projeto", name: "link", widget: "string", required: false }
+      - { label: "Corpo", name: "body", widget: "markdown" }
