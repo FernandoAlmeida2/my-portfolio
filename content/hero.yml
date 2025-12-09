@@ -1,11 +1,7 @@
 title: "Fernando Almeida"
 subtitle: "Full-stack developer"
-description: "Full-stack developer focused on building efficient, scalable and user-friendly applications. Turning ideas into high-quality digital experiences."
-about: "I’m a Brazilian full-stack developer passionate about clean code,
-          performance and creating solutions that generate real impact. I work
-          with modern technologies such as React, TypeScript, Next.js, Java,
-          Spring Boot, PostgreSQL, and Docker — always focused on quality,
-          maintainability, and a great user experience."
+description: "Full-stack developer creating scalable, user-focused applications. Passionate about clean design, data-driven systems, and turning ideas into seamless digital experiences — and a former chess competitor at heart."
+about: "I’m a full-stack developer with a background in Physics and experience building platforms, dashboards, and backend systems for public and research institutions. I enjoy solving complex problems, working with data, and creating applications that are both efficient and intuitive. I’m constantly learning, collaborating, and refining my craft to deliver meaningful digital products."
 socials:
   - label: "GitHub"
     url: "https://github.com/FernandoAlmeida2"
