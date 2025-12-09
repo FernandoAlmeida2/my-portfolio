@@ -4,6 +4,7 @@ import Link from "next/link";
 import ProjectsCarousel from "./components/ProjectsCarousel";
 import { getHero } from "@/lib/getHero";
 import { getServices } from "@/lib/getServices";
+import Image from "next/image";
 
 export default function Home() {
   const hero = getHero();
@@ -13,34 +14,109 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* ===========================
+          HEADER
+      ============================ */}
+      <header className="py-6 px-6 md:px-16 lg:px-32 bg-neutral-950 text-white font-semibold">
+        <div className="flex flex-col md:flex-row justify-between gap-8">
+          <div>
+            <ul className="flex mt-3 space-y-2 gap-8">
+              <li>
+                <Link href="#about" className="hover:underline">
+                  About me
+                </Link>
+              </li>
+              <li>
+                <Link href="#projects" className="hover:underline">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="#services" className="hover:underline">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="#contact" className="hover:underline">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="mt-3 flex items-center gap-4">
+              {/* LinkedIn */}
+              <a
+                href={hero.socials[1].url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition"
+              >
+                <Image
+                  src="/icons/linkedin.png"
+                  alt="LinkedIn icon"
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
+              </a>
+
+              {/* GitHub */}
+              <a
+                href={hero.socials[0].url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition"
+              >
+                <Image
+                  src="/icons/github-white.png"
+                  alt="GitHub icon"
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      {/* ===========================
           HERO / PRESENTATION
       ============================ */}
       <section
         id="presentation"
-        className="min-h-screen flex flex-col justify-center items-start px-6 md:px-16 lg:px-32 bg-white dark:bg-neutral-900"
+        className="min-h-screen flex flex-col justify-between items-center bg-white dark:bg-neutral-900 mt-30"
       >
-        <h1 className="text-4xl md:text-6xl font-bold text-neutral-900 dark:text-neutral-100">
+        <h1 className="text-4xl md:text-6xl font-bold dark:text-neutral-100">
           {hero.title}
         </h1>
 
-        <p className="mt-4 text-lg md:text-xl text-neutral-600 dark:text-neutral-300 max-w-xl">
+        <p className="mt-4 text-lg md:text-2xl font-light dark:text-neutral-300 max-w-xl leading-7">
           {hero.description}
         </p>
 
-        <div className="mt-8 flex gap-4">
+        <div className="flex gap-4">
           <Link
             href="#projects"
-            className="px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition"
+            className="px-6 py-3 bg-[#1A2601] text-base md:text-xl text-bold text-white rounded-xl hover:bg-black transition"
           >
             See my projects
           </Link>
 
           <Link
             href="#contact"
-            className="px-6 py-3 border border-neutral-400 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
+            className="px-6 py-3 border text-base md:text-xl border-neutral-400 dark:text-neutral-300 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
           >
             Contact me
           </Link>
+        </div>
+        <div className="">
+          <Image
+          src="/profile.png"
+          alt="profile img"
+          width={510}
+          height={477}
+        />
         </div>
       </section>
 
