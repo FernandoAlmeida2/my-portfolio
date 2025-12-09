@@ -1,0 +1,13 @@
+title: "Fernando Almeida"
+subtitle: "Full-stack developer"
+description: "Full-stack developer focused on building efficient, scalable and user-friendly applications. Turning ideas into high-quality digital experiences."
+about: "I’m a Brazilian full-stack developer passionate about clean code,
+          performance and creating solutions that generate real impact. I work
+          with modern technologies such as React, TypeScript, Next.js, Java,
+          Spring Boot, PostgreSQL, and Docker — always focused on quality,
+          maintainability, and a great user experience."
+socials:
+  - label: "GitHub"
+    url: "https://github.com/FernandoAlmeida2"
+  - label: "LinkedIn"
+    url: "https://www.linkedin.com/in/fernandoalmeida1990/"
