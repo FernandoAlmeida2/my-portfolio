@@ -1,0 +1,21 @@
+title: "Services"
+services:
+  - name: "Website Development"
+    description: "Modern, fast and responsive websites built with Next.js."
+    features:
+      - "UI/UX implementation"
+      - "SEO optimization"
+      - "Contact form with email notifications"
+      - "Deployment included"
+  - name: "Landing Pages"
+    description: "High-converting landing pages with clean design."
+    features:
+      - "Fast delivery"
+      - "Mobile first"
+      - "Copywriting guidance"
+  - name: "API & Backend Engineering"
+    description: "Creation of scalable APIs, authentication flows, microservices, and database modeling."
+    features:
+      - "RESTful API design and implementation"
+      - "PostgreSQL schema design & optimization"
+      - "Dockerization and deployment support"
