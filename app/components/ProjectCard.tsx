@@ -63,7 +63,7 @@ export default function ProjectCard({ project }: Props) {
         {project.link ? (
           <Link
             href={project.link}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            className="bg-[#3A411B] text-white px-4 py-2 rounded-lg hover:bg-[#292d14] transition"
           >
             View Project
           </Link>

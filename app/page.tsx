@@ -91,7 +91,7 @@ export default function Home() {
           {hero.title}
         </h1>
 
-        <p className="mt-4 text-lg md:text-2xl font-light dark:text-neutral-300 max-w-xl leading-7">
+        <p className="text-lg md:text-2xl font-light dark:text-neutral-300 max-w-xl leading-7">
           {hero.description}
         </p>
 
@@ -231,7 +231,7 @@ export default function Home() {
 
           <button
             type="submit"
-            className="px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition w-fit"
+            className="px-6 py-3 bg-[#3A411B] text-white rounded-xl hover:bg-[#292d14] transition w-fit"
           >
             Send message
           </button>
