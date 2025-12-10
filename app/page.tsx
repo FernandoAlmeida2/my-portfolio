@@ -12,14 +12,14 @@ export default function Home() {
   const services = getServices();
 
   return (
-    <div className="flex flex-col">
+    <div className="font-albert flex flex-col">
       {/* ===========================
           HEADER
       ============================ */}
-      <header className="py-6 px-6 md:px-16 lg:px-32 bg-neutral-950 text-white font-semibold">
+      <header className="font-montserrat py-4 px-6 md:px-16 lg:px-32 bg-[#1A2601] text-white font-semibold">
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <div>
-            <ul className="flex mt-3 space-y-2 gap-8">
+            <ul className="flex mt-3 space-y-2 gap-20 text:base md:text-xl">
               <li>
                 <Link href="#about" className="hover:underline">
                   About me
@@ -44,7 +44,7 @@ export default function Home() {
           </div>
 
           <div>
-            <div className="mt-3 flex items-center gap-4">
+            <div className="mt-3 flex items-center gap-6">
               {/* LinkedIn */}
               <a
                 href={hero.socials[1].url}
@@ -53,10 +53,10 @@ export default function Home() {
                 className="hover:opacity-80 transition"
               >
                 <Image
-                  src="/icons/linkedin.png"
+                  src="/icons/linkedin-white.png"
                   alt="LinkedIn icon"
-                  width={28}
-                  height={28}
+                  width={32}
+                  height={32}
                   className="object-contain"
                 />
               </a>
@@ -71,8 +71,8 @@ export default function Home() {
                 <Image
                   src="/icons/github-white.png"
                   alt="GitHub icon"
-                  width={28}
-                  height={28}
+                  width={32}
+                  height={32}
                   className="object-contain"
                 />
               </a>
@@ -85,38 +85,40 @@ export default function Home() {
       ============================ */}
       <section
         id="presentation"
-        className="min-h-screen flex flex-col justify-between items-center bg-white dark:bg-neutral-900 mt-30"
+        className="min-h-screen flex flex-col justify-between items-center bg-white dark:bg-neutral-900 mt-25"
       >
-        <h1 className="text-4xl md:text-6xl font-bold dark:text-neutral-100">
-          {hero.title}
-        </h1>
+        <div className="flex flex-col text-center gap-2">
+          <h1 className="text-4xl md:text-6xl font-bold dark:text-neutral-100">
+            {hero.title}
+          </h1>
 
-        <p className="text-lg md:text-2xl font-light dark:text-neutral-300 max-w-xl leading-7">
-          {hero.description}
-        </p>
+          <p className="text-justify text-lg md:text-2xl font-light dark:text-neutral-300 max-w-lg leading-7">
+            {hero.description}
+          </p>
+          <div className="font-montserrat flex justify-center gap-8 mt-6">
+            <Link
+              href="#projects"
+              className="px-6 py-3 bg-[#1A2601] shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-base md:text-xl text-bold text-white rounded-xl hover:bg-black transition"
+            >
+              See my projects
+            </Link>
 
-        <div className="flex gap-4">
-          <Link
-            href="#projects"
-            className="px-6 py-3 bg-[#1A2601] text-base md:text-xl text-bold text-white rounded-xl hover:bg-black transition"
-          >
-            See my projects
-          </Link>
-
-          <Link
-            href="#contact"
-            className="px-6 py-3 border text-base md:text-xl border-neutral-400 dark:text-neutral-300 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
-          >
-            Contact me
-          </Link>
+            <Link
+              href="#contact"
+              className="px-6 py-3 border border-[rgba(178,178,178,1)] shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-base md:text-xl dark:text-neutral-300 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
+            >
+              Contact me
+            </Link>
+          </div>
         </div>
+
         <div className="">
           <Image
-          src="/profile.png"
-          alt="profile img"
-          width={510}
-          height={477}
-        />
+            src="/profile.png"
+            alt="profile img"
+            width={510}
+            height={477}
+          />
         </div>
       </section>
 
@@ -125,15 +127,17 @@ export default function Home() {
       ============================ */}
       <section
         id="about"
-        className="py-20 px-6 md:px-16 lg:px-32 bg-[#ECF0DB] dark:bg-neutral-800"
+        className="flex flex-col items-center py-20 px-6 md:px-16 lg:px-32 bg-[#ECF0DB] dark:bg-neutral-800"
       >
-        <h2 className="text-3xl font-semibold text-neutral-900 dark:text-neutral-100 mb-6">
-          About Me
-        </h2>
+        <div>
+          <h2 className="text-2xl md:text-4xl font-bold text-[#1A2601] dark:text-neutral-100 mb-6">
+            About Me
+          </h2>
 
-        <p className="text-neutral-700 dark:text-neutral-300 max-w-3xl leading-relaxed text-lg">
-          {hero.about}
-        </p>
+          <p className="text-black font-light dark:text-neutral-300 max-w-3xl leading-relaxed text-base md:text-xl">
+            {hero.about}
+          </p>
+        </div>
       </section>
 
       {/* ===========================
@@ -143,7 +147,7 @@ export default function Home() {
         id="projects"
         className="py-20 px-6 md:px-16 lg:px-32 bg-white dark:bg-neutral-900"
       >
-        <h2 className="text-3xl font-semibold text-neutral-900 dark:text-neutral-100 mb-10">
+        <h2 className="text-[#1A2601] text-2xl md:text-4xl font-bold dark:text-neutral-100 mb-10">
           My Projects
         </h2>
 
@@ -157,7 +161,7 @@ export default function Home() {
         id="services"
         className="py-20 px-6 md:px-16 lg:px-32 bg-[#ECF0DB] dark:bg-neutral-800"
       >
-        <h2 className="text-3xl font-semibold text-neutral-900 dark:text-neutral-100 mb-10">
+        <h2 className="text-[#1A2601] text-2xl md:text-4xl font-bold dark:text-neutral-100 mb-10">
           Services
         </h2>
 
@@ -165,15 +169,15 @@ export default function Home() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-neutral-900 rounded-xl shadow-md p-6 flex flex-col"
+              className="bg-[#F5F8ED] dark:bg-neutral-900 rounded-xl shadow-md p-6 flex flex-col"
             >
               {/* Nome do Serviço */}
-              <h3 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">
+              <h3 className="md:text-xl font-semibold dark:text-neutral-100">
                 {service.name}
               </h3>
 
               {/* Descrição */}
-              <p className="mt-3 text-neutral-600 dark:text-neutral-300">
+              <p className="md:text-xl mt-3 dark:text-neutral-300">
                 {service.description}
               </p>
 
@@ -183,9 +187,9 @@ export default function Home() {
                   {service.features.map((feature: string, idx: number) => (
                     <li
                       key={idx}
-                      className="text-neutral-700 dark:text-neutral-300 pl-5 relative"
+                      className="md:text-xl dark:text-neutral-300 pl-5 relative"
                     >
-                      <span className="absolute left-0 top-2 w-2 h-2 bg-neutral-400 dark:bg-neutral-500 rounded-full"></span>
+                      <span className="absolute left-0 top-2 w-1 h-1 bg-black dark:bg-neutral-500 rounded-full"></span>
                       {feature}
                     </li>
                   ))}
@@ -203,35 +207,35 @@ export default function Home() {
         id="contact"
         className="py-20 px-6 md:px-16 lg:px-32 bg-white dark:bg-neutral-900"
       >
-        <h2 className="text-3xl font-semibold text-neutral-900 dark:text-neutral-100 mb-6">
+        <h2 className="text-[#1A2601] text-2xl md:text-4xl font-bold dark:text-neutral-100 mb-6">
           Contact
         </h2>
 
-        <p className="text-neutral-700 dark:text-neutral-300 mb-8 max-w-xl">
+        <p className="md:text-xl font-light dark:text-neutral-300 mb-8">
           Feel free to send me a message. Let’s build something amazing
           together.
         </p>
 
-        <form className="grid max-w-xl gap-5">
+        <form className="font-montserrat grid gap-5 max-w-2xl">
           <input
             type="text"
             placeholder="Your name"
-            className="p-3 rounded-lg bg-[#F5F8ED] dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"
+            className="p-3 rounded-lg bg-[#F5F8ED] dark:bg-neutral-800 text-[#5E5353] text-xs md:text-sm dark:text-neutral-100"
           />
           <input
             type="email"
             placeholder="Your email"
-            className="p-3 rounded-lg bg-[#F5F8ED] dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"
+            className="p-3 rounded-lg bg-[#F5F8ED] dark:bg-neutral-800 text-[#5E5353] text-xs md:text-sm dark:text-neutral-100"
           />
           <textarea
             placeholder="Your message"
-            className="p-3 rounded-lg bg-[#F5F8ED] dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"
+            className="p-3 rounded-lg bg-[#F5F8ED] dark:bg-neutral-800 text-[#5E5353] text-xs md:text-sm dark:text-neutral-100"
             rows={5}
           ></textarea>
 
           <button
             type="submit"
-            className="px-6 py-3 bg-[#3A411B] text-white rounded-xl hover:bg-[#292d14] transition w-fit"
+            className="px-8 py-4 bg-[#1A2601] text-white rounded-xl hover:bg-[#292d14] text-sm md:text-base transition w-fit"
           >
             Send message
           </button>

@@ -31,7 +31,7 @@ export default function ProjectCard({ project }: Props) {
           {project.title}
         </h3>
 
-        <div className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+        <div className="text-neutral-600 dark:text-neutral-300 leading-relaxed">
           <p className={expanded ? "" : "line-clamp-3"}>
             {project.description}
           </p>
@@ -48,7 +48,7 @@ export default function ProjectCard({ project }: Props) {
         </div>
 
         {/* Technologies */}
-        <div className="flex flex-wrap gap-2 mt-2">
+        <div className="flex flex-wrap gap-2 my-2">
           {project.techs.map((tech, index) => (
             <span
               key={index}
