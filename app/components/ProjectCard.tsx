@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: Props) {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="w-full max-w-md mx-auto bg-white dark:bg-neutral-900 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+    <div className="w-88 md:w-full max-w-md mx-auto bg-white dark:bg-neutral-900 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
       {/* Image */}
       <div className="relative w-full h-48 md:h-56">
         <Image
