@@ -12,7 +12,7 @@ export default function Home() {
   const services = getServices();
 
   return (
-    <div className="font-albert flex flex-col">
+    <div className="font-albert flex flex-col dark:bg-neutral-900">
       {/* ===========================
           HEADER
       ============================ */}
