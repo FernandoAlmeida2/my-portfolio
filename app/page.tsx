@@ -5,6 +5,7 @@ import ProjectsCarousel from "./components/ProjectsCarousel";
 import { getHero } from "@/lib/getHero";
 import { getServices } from "@/lib/getServices";
 import Image from "next/image";
+import Presentation from "./components/Presentation";
 
 export default function Home() {
   const hero = getHero();
@@ -83,44 +84,7 @@ export default function Home() {
       {/* ===========================
           HERO / PRESENTATION
       ============================ */}
-      <section
-        id="presentation"
-        className="min-h-180 md:min-h-screen flex flex-col justify-between items-center bg-white dark:bg-neutral-900 mt-15 md:mt-25"
-      >
-        <div className="flex flex-col text-center gap-2">
-          <h1 className="text-4xl md:text-6xl font-bold dark:text-neutral-100">
-            {hero.title}
-          </h1>
-
-          <p className="text-justify text-lg md:text-2xl font-light dark:text-neutral-300 max-w-lg leading-7 px-4">
-            {hero.description}
-          </p>
-          <div className="font-montserrat flex justify-center gap-8 mt-6">
-            <Link
-              href="#projects"
-              className="px-6 py-3 bg-[#1A2601] shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-base md:text-xl text-bold text-white rounded-xl hover:bg-black transition"
-            >
-              See my projects
-            </Link>
-
-            <Link
-              href="#contact"
-              className="px-6 py-3 border border-[rgba(178,178,178,1)] shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-base md:text-xl dark:text-neutral-300 rounded-xl hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
-            >
-              Contact me
-            </Link>
-          </div>
-        </div>
-
-        <div className="">
-          <Image
-            src="/profile.png"
-            alt="profile img"
-            width={510}
-            height={477}
-          />
-        </div>
-      </section>
+      <Presentation hero={hero} />
 
       {/* ===========================
           ABOUT ME
