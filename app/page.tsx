@@ -127,7 +127,7 @@ export default function Home() {
       ============================ */}
       <section
         id="about"
-        className="flex flex-col items-center py-20 px-6 md:px-16 lg:px-32 bg-[#ECF0DB] dark:bg-neutral-800"
+        className="flex flex-col py-20 px-6 md:px-16 lg:px-32 bg-[#ECF0DB] dark:bg-neutral-800"
       >
         <div>
           <h2 className="text-2xl md:text-4xl font-bold text-[#1A2601] dark:text-neutral-100 mb-6">
@@ -151,7 +151,7 @@ export default function Home() {
           My Projects
         </h2>
 
-        <ProjectsCarousel projects={projects} />
+       <ProjectsCarousel projects={projects} />
       </section>
 
       {/* ===========================
