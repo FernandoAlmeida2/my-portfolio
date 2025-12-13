@@ -151,7 +151,7 @@ export default function Home() {
           My Projects
         </h2>
 
-        <ProjectsCarousel projects={projects} />
+       <ProjectsCarousel projects={projects} />
       </section>
 
       {/* ===========================

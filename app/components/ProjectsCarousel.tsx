@@ -30,7 +30,8 @@ export default function ProjectsCarousel({ projects }: Props) {
       {/* Left Arrow */}
       <button
         onClick={() => scroll("left")}
-        className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 bg-neutral-900/80 text-white p-3 rounded-full shadow-lg hover:bg-neutral-900 hidden md:block"
+        className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 bg-neutral-900/80 text-white p-3 
+        rounded-full shadow-lg hover:bg-neutral-900 hover:scale-110 transition-all duration-200 hidden md:block"
       >
         ◀
       </button>
@@ -38,15 +39,12 @@ export default function ProjectsCarousel({ projects }: Props) {
       {/* Cards Container */}
       <div
         ref={scrollRef}
-        className="
-          flex gap-8 overflow-x-auto scrollbar-none py-4
-          scroll-smooth w-full
-        "
+        className="flex gap-8 overflow-x-auto scrollbar-none py-4 scroll-smooth w-full snap-x snap-mandatory"
       >
         {projects.map((project) => (
           <div 
             key={project.slug} 
-            className="shrink-0"
+            className="shrink-0 transition-transform duration-300 ease-out hover:-translate-y-1"
           >
             <ProjectCard project={project} />
           </div>
@@ -56,7 +54,8 @@ export default function ProjectsCarousel({ projects }: Props) {
       {/* Right Arrow */}
       <button
         onClick={() => scroll("right")}
-        className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 bg-neutral-900/80 text-white p-3 rounded-full shadow-lg hover:bg-neutral-900 hidden md:block"
+        className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 bg-neutral-900/80 text-white p-3 
+        rounded-full shadow-lg hover:bg-neutral-900 hover:scale-110 transition-all duration-200 hidden md:block"
       >
         ▶
       </button>
